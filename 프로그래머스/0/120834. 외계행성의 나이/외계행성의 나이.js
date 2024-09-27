@@ -13,3 +13,5 @@ function solution(age) { // 숫자
         answer.push(stringArr[index]);
     }return answer.join("");
 }
+
+// 문자열 index를 사용할수있어서 굳이 배열로 만들지않아도 됨
