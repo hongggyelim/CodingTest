@@ -1,4 +1,12 @@
 function solution(numbers) {
-    numbers.sort((a, b) =>b-a);
-    return numbers[0]*numbers[1] ;
+    let answer = 1;
+    
+    const max = Math.max(...numbers)
+    answer *= max;
+    const maxIndex = numbers.indexOf(max);
+    numbers.splice(maxIndex, 1);
+    const maxNext = Math.max(...numbers)
+    answer *= maxNext;
+    
+    return answer;
 }
