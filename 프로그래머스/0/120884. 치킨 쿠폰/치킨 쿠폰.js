@@ -1,12 +1,6 @@
 function solution(chicken) {
-    let ck = chicken;
-    let share = 0;
-    let rest = 0;
-    while (ck >= 10){
-        let newShare = Math.floor(ck / 10);
-        share += newShare
-        ck = newShare + (ck%10)
-    }
-        
-    return share ;
+    if (chicken < 10) return 0; // 10마리 이하일 경우 서비스 치킨 없음
+
+    const x = Math.floor((chicken - 10) / 9);
+    return 1 + x;
 }
