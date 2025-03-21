@@ -1,16 +1,14 @@
 function solution(n) {    
     const answer = [];
     let numbers = [];
-    let i = 1,
+    var i = 1,
         j = 1;
-
     while(i <= n){
-        if(i > n) break;        
-        numbers.push(i);
         let total = 0;
+        numbers.push(i);
         for(const num of numbers) total += num;
-        if(total === n){ 
-            answer.push(numbers.shift());                 
+        if(total == n){
+            answer.push(numbers.shift());            
             i = j++;             
         }else if(total > n){
             numbers = [];
@@ -18,6 +16,5 @@ function solution(n) {
         }        
         i++;
     }
-
     return answer.length;
 }
