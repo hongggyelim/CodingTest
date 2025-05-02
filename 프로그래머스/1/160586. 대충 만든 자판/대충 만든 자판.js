@@ -6,7 +6,6 @@ function solution(keymap, targets) {
             // keymap 원소 중 char 랑 같은 index 찾기 
             let index = []
             for (key of keymap){
-                let i = key.indexOf(char)
                 index.push(key.indexOf(char))    
                 
             }
